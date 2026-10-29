@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Infinite Scroll Footers Impact Web Accessibility - ux</title>
+    <meta name="description" content="Infinite scrolling automatically loads content as a user browses down a page, but combining this pattern with a traditional website footer creates severe usability and accessibility barriers. This article examines how unreachable footers break navigation">
+    <link rel="canonical" href="https://salivity.github.io/ux/article/how-infinite-scroll-footers-impact-web-accessibility">
+    <link rel="search" type="application/opensearchdescription+xml" title="ux" href="/ux/opensearch.xml">
+    <link rel="icon" href="/ux/favicon.ico">
+    <link rel="stylesheet" href="/ux/css/style.css">
+    <link media="print" rel="stylesheet" href="/ux/css/print.css">
+    <script src="/ux/js/fuse.min.js"></script>
+    <script src="/ux/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="How Infinite Scroll Footers Impact Web Accessibility - ux" />
+    <meta property="og:url" content="https://salivity.github.io/ux/article/how-infinite-scroll-footers-impact-web-accessibility" />
+    <meta property="og:image" content="https://salivity.github.io/ux/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/ux/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="Infinite scrolling automatically loads content as a user browses down a page, but combining this pattern with a traditional website footer creates severe usability and accessibility barriers. This article examines how unreachable footers break navigation" />
+    <link rel="manifest" href="/ux/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/ux/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>ux</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/ux/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="how-infinite-scroll-footers-impact-web-accessibility">How
+Infinite Scroll Footers Impact Web Accessibility</h1>
+<p>Infinite scrolling automatically loads content as a user browses down
+a page, but combining this pattern with a traditional website footer
+creates severe usability and accessibility barriers. This article
+examines how unreachable footers break navigation for users relying on
+keyboards and assistive technologies, the specific ways this pattern
+degrades the web experience, and the accessible alternatives developers
+can implement to resolve these issues.</p>
+<h3 id="the-problem-of-the-moving-target">The Problem of the Moving
+Target</h3>
+<p>The primary issue with placing a footer below an infinite scroll
+container is physical reachability. Footers typically house essential
+links such as privacy policies, contact information, terms of service,
+and sitemaps. When a user scrolls to the bottom of the viewport to view
+these links, the application triggers an asynchronous fetch to load new
+content. This immediately pushes the footer downward, creating a moving
+target that sighted users cannot click and keyboard users cannot easily
+reach.</p>
+<h3 id="keyboard-navigation-and-focus-traps">Keyboard Navigation and
+Focus Traps</h3>
+<p>Users who navigate via keyboard (using the <code>Tab</code> key)
+experience significant friction with infinite scroll footers.</p>
+<ul>
+<li><strong>Infinite Tab Cycles:</strong> To reach links in a footer, a
+keyboard user must tab through every single interactive element in the
+feed. When new content loads dynamically, dozens of new focusable
+elements enter the Document Object Model (DOM), effectively trapping the
+user in an endless stream of content.</li>
+<li><strong>Loss of Focus Management:</strong> Dynamic updates
+frequently cause the browser's focus indicator to reset to the top of
+the page or become lost entirely, forcing the user to restart
+navigation.</li>
+</ul>
+<h3 id="impact-on-screen-readers-and-cognitive-load">Impact on Screen
+Readers and Cognitive Load</h3>
+<p>For individuals who use screen readers, the unexpected addition of
+content beneath the current reading position creates disorientation.
+Screen readers rely on a predictable DOM structure to calculate page
+landmark landmarks and total page length.</p>
+<p>Constantly expanding pages make it impossible to determine where a
+page ends. Furthermore, without proper ARIA live regions
+(<code>aria-live="polite"</code>), screen reader users may not even be
+informed that new content has loaded, leaving them confused as to why
+the footer they are searching for remains inaccessible. For users with
+cognitive or attention disabilities, the lack of an endpoint causes
+fatigue and visual overload.</p>
+<h3 id="best-practices-and-accessible-alternatives">Best Practices and
+Accessible Alternatives</h3>
+<p>To preserve accessibility while maintaining modern browsing
+mechanics, development teams should adopt patterns that do not
+compromise baseline navigational needs:</p>
+<ul>
+<li><strong>Use a "Load More" Button:</strong> Replace automatic loading
+with a clear, user-activated button. This allows the page to remain
+static until requested, giving keyboard and screen reader users a clear
+boundary and unobstructed access to the footer below.</li>
+<li><strong>Relocate Essential Links:</strong> If infinite scroll is
+strictly necessary, move critical footer information into a persistent
+secondary navigation bar, a header dropdown, or an off-canvas drawer
+that can be toggled via an accessible button.</li>
+<li><strong>Implement Sticky Footers or Floating Panels:</strong> Fix
+the footer or key utilitarian links to the bottom or side of the
+viewport so they remain consistently accessible regardless of dynamic
+content expansion.</li>
+<li><strong>Provide Skip Links:</strong> Implement a visible "Skip to
+Footer" link at the beginning of the feed so keyboard and screen reader
+users can bypass dynamic feeds entirely if they only need administrative
+or legal links.</li>
+</ul></article>
+        <div id='disqus_thread'></div>
+        <script>
+
+            var disqus_config = function () {
+                this.page.url =         'https://salivity.github.io/ux/article/how-infinite-scroll-footers-impact-web-accessibility';  
+                //this.page.identifier =  PAGE_IDENTIFIER; 
+            };
+            
+            (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://salivity-github-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/ux/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/ux/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Design Multi-Language Website Navigation - ux</title>
+    <meta name="description" content="Designing effective multi-language navigation requires creating an intuitive, accessible pathway for global audiences to access content in their preferred language. This article outlines practical user experience principles for multi-language navigation,">
+    <link rel="canonical" href="https://salivity.github.io/ux/article/how-to-design-multi-language-website-navigation">
+    <link rel="search" type="application/opensearchdescription+xml" title="ux" href="/ux/opensearch.xml">
+    <link rel="icon" href="/ux/favicon.ico">
+    <link rel="stylesheet" href="/ux/css/style.css">
+    <link media="print" rel="stylesheet" href="/ux/css/print.css">
+    <script src="/ux/js/fuse.min.js"></script>
+    <script src="/ux/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="How to Design Multi-Language Website Navigation - ux" />
+    <meta property="og:url" content="https://salivity.github.io/ux/article/how-to-design-multi-language-website-navigation" />
+    <meta property="og:image" content="https://salivity.github.io/ux/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/ux/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="Designing effective multi-language navigation requires creating an intuitive, accessible pathway for global audiences to access content in their preferred language. This article outlines practical user experience principles for multi-language navigation," />
+    <link rel="manifest" href="/ux/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/ux/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>ux</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/ux/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="how-to-design-multi-language-website-navigation">How to Design
+Multi-Language Website Navigation</h1>
+<p>Designing effective multi-language navigation requires creating an
+intuitive, accessible pathway for global audiences to access content in
+their preferred language. This article outlines practical user
+experience principles for multi-language navigation, covering selector
+placement, naming conventions, text expansion, layout adaptations for
+bidirectional scripts, and avoiding common pitfalls like flag
+iconography.</p>
+<h3 id="choose-predictable-placement">Choose Predictable Placement</h3>
+<p>Place the language selector in a standard, easily discoverable
+location. The top-right corner of the global header is the universal
+standard for desktop interfaces. In mobile designs, position the
+selector either prominently at the top of the navigation drawer or
+inside the sticky header. A secondary selector in the website footer
+serves as an effective fallback for users who scroll past the
+header.</p>
+<h3 id="use-native-language-names-autonyms">Use Native Language Names
+(Autonyms)</h3>
+<p>Always display each language option in its native script and spelling
+rather than translating it into the currently selected language. For
+example, use "Deutsch" instead of "German," and "日本語" instead of
+"Japanese." This practice ensures that users who do not understand the
+current page's language can immediately identify their own native
+tongue.</p>
+<h3 id="avoid-using-country-flags-to-represent-languages">Avoid Using
+Country Flags to Represent Languages</h3>
+<p>Flags represent countries and territories, not languages. Associating
+a flag with a language alienates users from other nations where that
+language is also spoken—such as using the Spanish flag for Latin
+American users, or the UK flag for American or Australian English
+speakers. Instead, pair native language labels with a universal symbol,
+such as a globe icon (<code>🌐</code>), to signal language or regional
+settings.</p>
+<h3 id="design-for-text-expansion">Design for Text Expansion</h3>
+<p>Translations rarely match the character length of the original text.
+Words translated from English into languages like German, French, or
+Finnish often expand by 20% to 40%. Navigation bars, drop-down menus,
+and action buttons must feature flexible containers and dynamic padding
+to prevent awkward line breaks, truncation, or overlapping interface
+elements.</p>
+<h3 id="support-right-to-left-rtl-layouts">Support Right-to-Left (RTL)
+Layouts</h3>
+<p>For languages such as Arabic, Hebrew, and Persian, navigation
+structures must flip horizontally. This involves mirroring layout
+hierarchy, reading order, navigation drawers, breadcrumbs, and
+directional icons. Ensure that CSS frameworks utilize logical properties
+(such as <code>margin-inline-start</code> instead of
+<code>margin-left</code>) to simplify bidirectional rendering.</p>
+<h3 id="separate-language-from-region-and-currency">Separate Language
+from Region and Currency</h3>
+<p>Global platforms often conflate language with geography or currency.
+A user in Switzerland might prefer English while requiring prices in
+Swiss Francs (CHF). Provide separate selectors for language, region, and
+currency, or design a matrix selector that clearly decouples content
+language from regional delivery and billing settings.</p>
+<h3 id="offer-suggestions-instead-of-forcing-redirects">Offer
+Suggestions Instead of Forcing Redirects</h3>
+<p>Detect a user’s preferred language via their browser's
+<code>Accept-Language</code> header rather than aggressive IP-based
+geolocation, which can be inaccurate for travelers or VPN users. Instead
+of automatically redirecting users and disrupting their experience,
+display a subtle, non-intrusive banner suggesting the localized version
+of the page, while preserving their ability to stay on the current
+version. Once a selection is made, store the preference in a persistent
+cookie or user profile.</p></article>
+        <div id='disqus_thread'></div>
+        <script>
+
+            var disqus_config = function () {
+                this.page.url =         'https://salivity.github.io/ux/article/how-to-design-multi-language-website-navigation';  
+                //this.page.identifier =  PAGE_IDENTIFIER; 
+            };
+            
+            (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://salivity-github-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/ux/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/ux/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>
