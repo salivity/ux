@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact of Missing Image Alt Text on Screen Readers - ux</title>
+    <meta name="description" content="Missing alternative text (alt-text) on digital images directly compromises web accessibility by leaving screen reader users without vital visual context. When alt-text is omitted, assistive technologies cannot interpret the purpose or content of an image,">
+    <link rel="canonical" href="https://salivity.github.io/ux/article/impact-of-missing-image-alt-text-on-screen-readers">
+    <link rel="search" type="application/opensearchdescription+xml" title="ux" href="/ux/opensearch.xml">
+    <link rel="icon" href="/ux/favicon.ico">
+    <link rel="stylesheet" href="/ux/css/style.css">
+    <link media="print" rel="stylesheet" href="/ux/css/print.css">
+    <script src="/ux/js/fuse.min.js"></script>
+    <script src="/ux/js/script.js"></script>
+    <script id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/4.1.3/tex-chtml.min.js" defer></script>
+    <script src="/monetize/monetize.js"></script>
+    <script src="/social/social.js"></script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Impact of Missing Image Alt Text on Screen Readers - ux" />
+    <meta property="og:url" content="https://salivity.github.io/ux/article/impact-of-missing-image-alt-text-on-screen-readers" />
+    <meta property="og:image" content="https://salivity.github.io/ux/images/open-graph/default.webp" />
+    <meta property="og:image:secure_url" content="https://salivity.github.io/ux/images/open-graph/default.webp" />
+    <meta property="og:image:width" content="1120" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="Missing alternative text (alt-text) on digital images directly compromises web accessibility by leaving screen reader users without vital visual context. When alt-text is omitted, assistive technologies cannot interpret the purpose or content of an image," />
+    <link rel="manifest" href="/ux/pwa/manifest.json" />
+</head>
+<body>
+    <header>
+        <a href="/ux/" aria-label="Go To Home Page" title="Go To Home Page" id="logo">
+            <span>salivity.github.io/</span><span>ux</span>
+        </a>
+        <nav>
+            <ul class="header-links">
+                <li><a href="/ux/search" title="Search" aria-label="Go To Search Page"><svg class="svg-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"></path></svg></a></li>
+                <li><a id="theme-toggle" title="Theme" href="javascript:void(0);" aria-label="Toggle Website Theme"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <div class="article-layout">
+        <aside id="profile-sidebar" class="profile-column" aria-label="Author Profile"></aside>
+        <div class="article-main-column">
+            <article><h1 id="impact-of-missing-image-alt-text-on-screen-readers">Impact of
+Missing Image Alt Text on Screen Readers</h1>
+<p>Missing alternative text (alt-text) on digital images directly
+compromises web accessibility by leaving screen reader users without
+vital visual context. When alt-text is omitted, assistive technologies
+cannot interpret the purpose or content of an image, leading to
+confusing file name announcements, broken navigation, and excluded
+users. This article examines how the absence of alt-text disrupts the
+screen reader experience, degrades comprehension, and impedes functional
+access to web content.</p>
+<h2 id="raw-file-names-and-unintelligible-output">Raw File Names and
+Unintelligible Output</h2>
+<p>When an image lacks an <code>alt</code> attribute, most screen
+readers attempt to provide whatever information is available in the
+underlying code. Typically, the software reads aloud the raw file path
+or file name, such as "graphic, DCIM_004928_cropped_v2.jpg."</p>
+<p>This behavior creates immediate friction for the user. Listening to
+long, serialized strings of letters, underscores, and file extensions
+interrupts the natural flow of reading. It forces the listener to parse
+through technological noise to determine whether the image contained
+essential information or was merely decorative. In other cases, the
+screen reader may simply announce the word "image" or "graphic" without
+any further detail, confirming an asset is present while withholding
+what it depicts.</p>
+<h2 id="loss-of-essential-information-and-context">Loss of Essential
+Information and Context</h2>
+<p>Images often convey meaning that is not duplicated in the surrounding
+text. Editorial photos, instructional diagrams, charts, and infographics
+rely heavily on visual communication to deliver their core message.</p>
+<p>When these visual elements lack descriptive alt-text:</p>
+<ul>
+<li><strong>Data becomes inaccessible:</strong> Charts and graphs
+without descriptive summaries or data tables render analytical content
+completely invisible to blind or low-vision users.</li>
+<li><strong>Context is lost:</strong> Images accompanying news articles
+or tutorials often provide essential context or emotional tone that text
+alone may not fully express.</li>
+<li><strong>Instructions fail:</strong> Screenshots or diagrams meant to
+guide users through a multi-step process leave screen reader users
+without the necessary directions to proceed.</li>
+</ul>
+<h2 id="broken-functional-elements">Broken Functional Elements</h2>
+<p>The most severe consequence of missing alt-text occurs when images
+serve a functional purpose. Many websites use linked images or
+standalone icons for primary navigation and user actions, such as search
+magnifying glasses, shopping carts, social media links, and close
+buttons.</p>
+<p>If a linked image does not include alt-text, the screen reader cannot
+announce the destination or action of that link. Instead, the user may
+hear "link, unlabelled graphic" or a verbose, unparsed URL. This turns
+interactive interfaces into guessing games, often preventing users from
+completing transactions, navigating menus, or submitting forms.</p>
+<h2 id="navigational-clutter-and-cognitive-fatigue">Navigational Clutter
+and Cognitive Fatigue</h2>
+<p>Screen reader users rely on specialized keyboard shortcuts to scan
+web pages efficiently, frequently pulling up lists of links, headings,
+or graphics to orient themselves.</p>
+<p>A page cluttered with unlabelled graphics corrupts this navigation
+strategy. Instead of reviewing a curated list of meaningful assets, the
+user encounters dozens of uninformative entries. Sorting through this
+structural clutter introduces significant cognitive fatigue, drastically
+slowing down information retrieval and leading many users to abandon the
+site entirely.</p>
+<h2
+id="the-distinction-between-missing-alt-text-and-decorative-images">The
+Distinction Between Missing Alt-Text and Decorative Images</h2>
+<p>A missing <code>alt</code> attribute is fundamentally different from
+an empty one. While purely decorative images should use a null alt
+attribute (<code>alt=""</code>) to instruct screen readers to ignore
+them silently, omitting the attribute altogether signals to the software
+that an asset exists without a designated role. Resolving this issue
+requires evaluating every image: functional and informative images
+require concise, descriptive text, while purely visual flourishes must
+be marked appropriately so screen readers can bypass them cleanly.</p></article>
+        <div id='disqus_thread'></div>
+        <script>
+
+            var disqus_config = function () {
+                this.page.url =         'https://salivity.github.io/ux/article/impact-of-missing-image-alt-text-on-screen-readers';  
+                //this.page.identifier =  PAGE_IDENTIFIER; 
+            };
+            
+            (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://salivity-github-io.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
+        </div>
+    </div>
+    
+    </main>
+    <footer>
+        <nav>
+            <ul class="social-links">
+            </ul>
+        </nav>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="https://smvc.dev/contact">Contact</a></li>
+                <li><a href="/ux/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/ux/terms-and-conditions">Terms and Conditions</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            Copyright &copy; <span id="current-year"></span>
+        </div>
+    </footer>
+</body>
+</html>
